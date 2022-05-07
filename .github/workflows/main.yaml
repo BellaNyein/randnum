@@ -2,9 +2,7 @@ name: Github Workshop
 
 on: 
   Release:
-    # types: [published]
-    #   tag:
-    #   -v1.*
+     types: [published]
 
 jobs:
   Push_To_Docker:
