@@ -1,8 +1,8 @@
 name: Github Workshop
 
 on: 
-  release:
-     types: [published]
+  push:
+    #  types: [published]
 
 jobs:
   Push_To_Docker:
