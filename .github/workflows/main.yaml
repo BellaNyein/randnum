@@ -1,7 +1,7 @@
 name: Github Workshop
 
 on: 
-  push:
+  Release:
     # types: [published]
     #   tag:
     #   -v1.*
