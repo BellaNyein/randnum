@@ -48,7 +48,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                    "text": "Name: Nyein Kalayar Kyaw \nMatriculation: A0249488H \nEmail: e0941681@u.nus.edu \nRepo: https://github.com/BellaNyein/randnum.git \nImage name:  bellanyein/randnum:v0.5 \nImage Url: https://hub.docker.com/r/bellanyein/randnum/tags"
                   }
                 }
               ]
