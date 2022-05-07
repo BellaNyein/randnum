@@ -52,7 +52,7 @@ jobs:
 
           push: true
 
-          tags: bellanyein/randnum:v0.11
+          tags: bellanyein/randnum:v0.5
 
          
 
