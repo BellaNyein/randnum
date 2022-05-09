@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout the code from github repo
         uses: actions/checkout@v2
-        with:
-        ref: ${{github.event.release.name}}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
