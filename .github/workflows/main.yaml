@@ -28,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME}}/randnum:${{github.event.release.name}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME}}/randnum:v0.5
 
       
       - name: Send custom JSON data to Slack workflow
@@ -44,7 +44,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: ${{ secrets.NOTIFY_NAME }}\nMatriculation: ${{ secrets.NOTIFY_MATRICULATION }}\nEmail: ${{ secrets.NOTIFY_EMAIL }}\nRepo: ${{ github.Repository_Url }}\nImage name:  ${{ secrets.DOCKERHUB_USERNAME }}/randnum:${{github.event.release.name}} \nImage url: ${{ secrets.DOCKERHUB_URL }}"
+                    "text": "Name: ${{ secrets.NOTIFY_NAME }}\nMatriculation: ${{ secrets.NOTIFY_MATRICULATION }}\nEmail: ${{ secrets.NOTIFY_EMAIL }}\nRepo: ${{ github.Repository_Url }}\nImage name:  ${{ secrets.DOCKERHUB_USERNAME }}/randnum:v0.5\nImage url: ${{ secrets.DOCKERHUB_URL }}"
                   }
                 }
               ]
