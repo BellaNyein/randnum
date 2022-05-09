@@ -28,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: bellanyein/randnum:v0.5
+          tags: ${{ secrets.DOCKERHUB_USERNAME}}/randnum:${{github.event.release.name}}
 
       
       - name: Send custom JSON data to Slack workflow
@@ -44,7 +44,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: Nyein Kalayar Kyaw \nMatriculation: A0249488H \nEmail: e0941681@u.nus.edu \nRepo: git://github.com/BellaNyein/randnum.git \nImage name:  bellanyein/randnum:v0.5 \nImage url: https://hub.docker.com/repository/docker/bellanyein/randnum"
+                    "text": "Name: ${{ secrets.NOTIFY_NAME }}\nMatriculation: ${{ secrets.NOTIFY_MATRICULATION }}\nEmail: ${{ secrets.NOTIFY_EMAIL }}\nRepo: ${{ github.Repository_Url }}\nImage name:  ${{ secrets.DOCKERHUB_USERNAME }}/randnum:${{github.event.release.name}} \nImage url: ${{ secrets.DOCKERHUB_URL }}"
                   }
                 }
               ]
